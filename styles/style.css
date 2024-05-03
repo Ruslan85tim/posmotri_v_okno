@@ -16,6 +16,7 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  padding: 133px 30px;
 }
 
 h1,
@@ -37,33 +38,26 @@ ol {
   list-style: none;
 }
 
-.page {
-  padding: 133px 30px;
-}
-
 .content {
   display: flex;
   justify-content: center;
   align-items: end;
-  height: 534px;
+  min-height: 534px;
   width: 1140px;
   gap: 32px;
-}
-
-.result {
-  width: 711px;
 }
 
 .result__video-container {
   position: relative;
   margin-bottom: 16px;
   width: 711px;
+  height: 386px;
 }
 
 .result__video {
   object-fit: cover;
-  width: 711px;
-  height: 386px;
+  width: 100%;
+  height: 100%;
 }
 
 .search-form {
@@ -72,7 +66,7 @@ ol {
   align-items: end;
   flex-wrap: wrap;
   width: 711px;
-  height: 54px;
+  min-height: 54px;
 }
 
 .search-form__fieldset {
@@ -94,16 +88,17 @@ fieldset {
 }
 
 input[type="text"] {
+  appearance: none;
   background-color: transparent;
   border: none;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   gap: 10px;
   width: 225px;
   height: 27px;
@@ -150,7 +145,7 @@ input:focus {
   outline-offset: 1px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
@@ -165,16 +160,15 @@ input:focus {
   text-align: center;
   color: #ffffff;
   cursor: pointer;
+  min-height: 34px;
 }
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
 }
 
 .more-button {
-  width: 399px;
-  height: 34px;
+  width: 100%;
 }
 
 .button:focus {
@@ -196,12 +190,11 @@ input:focus {
 
 .content__details {
   width: 399px;
-  height: 534px;
+  min-height: 534px;
 }
 
 .title {
   width: 260px;
-  height: 210px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -218,8 +211,8 @@ input:focus {
 .content__list {
   position: relative;
   height: 298px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
 .content__list-item:not(:last-child) {
@@ -246,6 +239,10 @@ input:focus {
   line-height: 100%;
   text-transform: uppercase;
   padding-bottom: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 196px;
 }
 
 .content__video-card-description {
@@ -257,17 +254,15 @@ input:focus {
 }
 
 .content__video-card-description-container {
-  width: 200px;
-  height: 101px;
+  width: 192px;
+  min-height: 101px;
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
+  width: 184px;
   height: 103px;
-}
-
-.preloader-template {
-  position: absolute;
+  object-fit: cover;
+  object-position: center;
 }
 
 .visually-hidden {
@@ -279,10 +274,6 @@ input:focus {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
-/*.content__list::-webkit-scrollbar {
-  display: none;
-}*/
 
 .content__card-link_current {
   background: #545050;
@@ -301,4 +292,8 @@ input:focus {
   outline: 1px solid #ffffff;
   outline-offset: 1px;
 }
-/*версия 1*/
+
+.content__card-link:active {
+  background: #545050;
+  padding: 2px;
+}
