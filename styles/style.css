@@ -42,7 +42,7 @@ ol {
   display: flex;
   justify-content: center;
   align-items: end;
-  min-height: 534px;
+
   width: 1140px;
   gap: 32px;
 }
@@ -66,7 +66,6 @@ ol {
   align-items: end;
   flex-wrap: wrap;
   width: 711px;
-  min-height: 54px;
 }
 
 .search-form__fieldset {
@@ -152,7 +151,7 @@ input:focus {
 .button {
   background-color: transparent;
   border: 1px solid #ffffff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -190,7 +189,6 @@ input:focus {
 
 .content__details {
   width: 399px;
-  min-height: 534px;
 }
 
 .title {
