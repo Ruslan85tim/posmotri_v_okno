@@ -16,7 +16,12 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  padding: 133px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*по макету отступ 133px, по вашей рекомендации изменил размещение на центр и теперь когда проверяю через
+  perfecpixel расхождение с макетом по вертикали 55px, надеюсь это не будет ошибкой. Визуально после изменения открывается в браузере по центру.
+  Может ли разрешение экрана влиять на расхождения с perfecpixel?*/
 }
 
 h1,
@@ -42,7 +47,6 @@ ol {
   display: flex;
   justify-content: center;
   align-items: end;
-
   width: 1140px;
   gap: 32px;
 }
@@ -109,6 +113,7 @@ input[type="text"] {
 .search-form__label {
   width: fit-content;
   cursor: pointer;
+  display: flex;
 }
 
 .search-form__checkbox-list {
